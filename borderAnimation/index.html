@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.box {
+  display: flex;
+  width: 100px;
+  height: 50px;
+  border-width: 10px;
+  border-radius: 50px;
+  border-color: transparent;
+  border-style: solid;
+  /* animation: 2s 2s linear infinite animateBorder; */
+  border-color: red;
+  animation: 2s 1s linear infinite clipAnimation;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+@keyframes clipAnimation {
+  0% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+  }
+  20% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+  40% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  }
+  60% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%, 100% 0%, 100% 0%);
+  }
+  80% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%, 0% 0%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%, 0% 0%, 0% 50%);
+  }
+  
+}
+
+@keyframes animateBorder {
+  0% {
+    border-color: transparent;
+  }
+  5% {
+    border-right-color: red;
+  }
+  38% {
+    border-right-color: red;
+    border-bottom-color: red;
+  }
+  70% {
+    border-right-color: red;
+    border-bottom-color: red;
+    border-left-color: red;
+  }
+  80% {
+    border-right-color: red;
+    border-left-color: red;
+    border-bottom-color: red;
+    border-top-color: red;
+  }
+  
+}
+.text{
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div class="box text">
+    <h5 >animation </h5>
+    
+  </div>
+  
+</body>
+</html>
