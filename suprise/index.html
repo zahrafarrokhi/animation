@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.ellipse{
+  width:200px;
+  height: 200px;
+  border-radius: 50%;
+  border:3px solid black;
+  /* transform: rotate(); */
+  transform-style: preserve-3d;
+  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+}
+.ellipse:nth-child(1) {
+  transform: rotateZ(60deg) rotateY(70deg);
+
+}
+.ellipse:nth-child(1) .circle {
+  animation-duration: 1s;
+
+}
+
+.ellipse:nth-child(2) {
+  transform: rotateZ(120deg) rotateY(70deg);
+  
+}
+.ellipse:nth-child(2) .circle {
+  animation-duration: 2s;
+
+}
+.ellipse:nth-child(3) {
+  transform: rotateZ(180deg) rotateY(70deg);
+  
+}
+.ellipse:nth-child(3) .circle {
+  animation-duration: 3s;
+
+}
+.circle{
+  width:30px;
+  height: 30px;
+  border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+  background: deepskyblue;
+  animation: move linear infinite;
+  background-color: aqua;
+}
+
+@keyframes move {
+    from {
+        transform: rotateZ(0) translateX(100px) rotateZ(0) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX(100px) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+  </style>
+</head>
+<body>
+  <!-- (div.ellipse>div.circle)*3 -->
+  <div class="ellipse">
+    <div class="circle"></div>
+  </div>
+  <div class="ellipse">
+    <div class="circle"></div>
+  </div>
+  <div class="ellipse">
+    <div class="circle"></div>
+  </div>
+</body>
+</html>
